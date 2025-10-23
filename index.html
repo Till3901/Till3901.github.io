@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Über Mich - Till</title>
+    <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Header-Bereich -->
+<div class="header">
+  <div class="header-inner">
+    <h1>About Me</h1>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html" class="active">About</a>
+      <a href="news.html">News</a>
+      <a href="reisen.html">Meine Projekte</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Wechsel zu dunklem Modus">Dark</button>
+  </div>
+</div>
+
+<!-- Hauptbereich mit Begrüßung und Bild -->
+<div class="container">
+    <div class="main-flex">
+  <div class="main-text">
+    <h2>Hi, ich bin Till!</h2>
+    <p>Willkommen auf meiner persönlichen Seite! Ich studiere Geoinformatik im 5. Semester und spiele leidenschaftlich gerne Fußball.<br>
+    Mehr über mich und meine Projekte findest du auf meinem <a href="https://github.com/Till3901" target="_blank" rel="noopener" aria-label="Zu meinem GitHub-Profil">GitHub-Profil</a>.<br>
+    Aktuell bin ich an der Hochschule Mainz und arbeite an spannenden Projekten rund um Geoinformatik und WebGIS.</p>
+  </div>
+  <div class="main-img">
+    <img src="1920xauto.webp" alt="Porträt von Till, Geoinformatik-Student und Fußballspieler" />
+  </div>
+    </div>
+
+  <!-- Lebenslauf-Tabelle -->
+    <h2>Mein Lebenslauf</h2>
+    <table class="cv-table">
+  <tr>
+    <th>Jahr</th>
+    <th>Station</th>
+    <th>Ort</th>
+    <th>Stichwort</th>
+  </tr>
+  <tr>
+    <td>2007</td>
+    <td>Grundschule Sankt Martin</td>
+    <td>Gau-Bickelheim</td>
+    <td>Grundschule</td>
+  </tr>
+  <tr>
+    <td>2011</td>
+    <td>Elisabeth Langgässer Gymnasium</td>
+    <td>Alzey</td>
+    <td>Abitur</td>
+  </tr>
+  <tr>
+    <td>2020</td>
+    <td>Ingenieurbüro Dhom</td>
+    <td>Budenheim</td>
+    <td>Ausbildung Geomatiker</td>
+  </tr>
+  <tr>
+    <td>2023</td>
+    <td>Hochschule Mainz</td>
+    <td>Mainz</td>
+    <td>Studium Geoinformatik und Vermessung</td>
+  </tr>
+  <tr>
+    <td>2026</td>
+    <td>Ingenieurbüro Dhom</td>
+    <td>Budenheim</td>
+    <td>Arbeit</td>
+  </tr>
+    </table>
+
+  </div>
+
+<script src="theme.js" defer></script>
+<script src="contact.js" defer></script>
+
+<!-- Floating contact widget -->
+<div class="contact-widget" aria-label="Kontaktmöglichkeiten">
+  <a href="https://github.com/Till3901" target="_blank" rel="noopener" aria-label="GitHub Profil">
+    <!-- GitHub mark -->
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1 .1 1.6-.8 1.6-.8.9-1.6 2.3-1.2 2.9-.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.3-3.3-.1-.3-.6-1.6.1-3.4 0 0 1-.3 3.3 1.3a11.5 11.5 0 016 0c2.3-1.6 3.3-1.3 3.3-1.3.7 1.8.2 3.1.1 3.4.8.9 1.3 2 1.3 3.3 0 4.6-2.7 5.6-5.3 5.9.4.3.8 1 .8 2v3c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
+  </a>
+  <a href="mailto:till.hasslinger@students.hs-mainz.de" class="open-outlook" data-email="till.hasslinger@students.hs-mainz.de" aria-label="E-Mail schreiben">
+    <!-- Mail mark -->
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+  </a>
+  <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Profil">
+    <!-- LinkedIn mark -->
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.01 0zM3 6.75h4v13.5H3zM9.5 10.25h3.6v1.8h.1c.5-.9 1.8-1.8 3.6-1.8 3.8 0 4.5 2.5 4.5 5.8v7.7h-4v-6.8c0-1.6 0-3.7-2.3-3.7-2.3 0-2.6 1.8-2.6 3.6v6.9h-4z"/></svg>
+  </a>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "n1",
+    "title": "Neue Vorlesung: WebGIS im Wintersemester",
+    "date": "2025-10-01",
+    "image": "assets/images/news/news1.webp",
+    "summary": "Ab sofort bieten wir die Vorlesung 'WebGIS' im Wintersemester an. Anmeldung über das Campus-Portal."
+  },
+  {
+    "id": "n2",
+    "title": "Projektabschluss: Stadtmodell 3D",
+    "date": "2025-09-12",
+    "image": "assets/images/news/news2.webp",
+    "summary": "Das 3D-Stadtmodell wurde fertiggestellt und steht nun als Open Data zur Verfügung. Danke an das Team!"
+  },
+  {
+    "id": "n3",
+    "title": "Exkursion nach Trondheim geplant",
+    "date": "2025-08-20",
+    "image": "assets/images/news/news3.webp",
+    "summary": "Im kommenden Semester ist eine Exkursion nach Trondheim geplant. Interessierte melden sich per E-Mail an."
+  }
+]

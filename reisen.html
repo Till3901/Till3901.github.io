@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meine Projekte - Till</title>
+    <link rel="stylesheet" href="styles.css">
+  <!-- Leaflet CSS -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <style>
+      /* Map container sizing inside the existing card layout */
+      .karte .map { height: 220px; border-radius: 8px; overflow: hidden; }
+      @media (min-width: 720px) { .karte .map { height: 260px; } }
+    </style>
+</head>
+<body>
+<div class="header">
+  <div class="header-inner">
+    <h1>About Me</h1>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a href="index.html">About</a>
+      <a href="news.html">News</a>
+      <a href="reisen.html" class="active">Meine Projekte</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-pressed="false" aria-label="Wechsel zu dunklem Modus">Dark</button>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Meine Projekte</h2>
+  <div class="galerie">
+    <div class="karte" id="project-bergen">
+      <div class="map" id="map-bergen" role="application" aria-label="Karte für Projekt Bergen"></div>
+      <h3>Projekt: OpenStreetMap-Auswertung Bergen</h3>
+      <p>Analyse der Fahrradwege und Tourismus-Hotspots in Bergen. Interaktives WebGIS zur Visualisierung von Routenvorschlägen.</p>
+      <a href="#" aria-label="Mehr über Projekt Bergen">Projektdetails</a>
+    </div>
+    <div class="karte" id="project-london">
+      <div class="map" id="map-london" role="application" aria-label="Karte für Projekt London"></div>
+      <h3>Projekt: Fußverkehrsmodell London</h3>
+      <p>Fußverkehrsmodell für zentrale Bezirke Londons zur Planung von Verkehrsberuhigungsmaßnahmen.</p>
+      <a href="#" aria-label="Mehr über Projekt London">Projektdetails</a>
+    </div>
+    <div class="karte" id="project-heidelberg">
+      <div class="map" id="map-heidelberg" role="application" aria-label="Karte für Projekt Heidelberg"></div>
+      <h3>Projekt: Historische Stadtkerne — Heidelberg</h3>
+      <p>Digitale Rekonstruktion und Analyse historischer Gebäude in Heidelberg mit Fokus auf Denkmalschutz.</p>
+      <a href="#" aria-label="Mehr über Projekt Heidelberg">Projektdetails</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script src="theme.js" defer></script>
+<script src="contact.js" defer></script>
+<script src="projects.js" defer></script>
+
+<!-- Floating contact widget -->
+<div class="contact-widget" aria-label="Kontaktmöglichkeiten">
+  <a href="https://github.com/Till3901" target="_blank" rel="noopener" aria-label="GitHub Profil">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .5a12 12 0 00-3.8 23.4c.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.6-4-1.6-.5-1.3-1.2-1.6-1.2-1.6-1-.7.1-.7.1-.7 1.2.1 1.9 1.3 1.9 1.3 1 .1 1.6-.8 1.6-.8.9-1.6 2.3-1.2 2.9-.9.1-.7.4-1.2.7-1.5-2.6-.3-5.3-1.3-5.3-5.9 0-1.3.5-2.4 1.3-3.3-.1-.3-.6-1.6.1-3.4 0 0 1-.3 3.3 1.3a11.5 11.5 0 016 0c2.3-1.6 3.3-1.3 3.3-1.3.7 1.8.2 3.1.1 3.4.8.9 1.3 2 1.3 3.3 0 4.6-2.7 5.6-5.3 5.9.4.3.8 1 .8 2v3c0 .3.2.7.8.6A12 12 0 0012 .5z"/></svg>
+  </a>
+  <a href="mailto:till.hasslinger@students.hs-mainz.de" class="open-outlook" data-email="till.hasslinger@students.hs-mainz.de" aria-label="E-Mail schreiben">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+  </a>
+  <a href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn Profil">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 11-.01 0zM3 6.75h4v13.5H3zM9.5 10.25h3.6v1.8h.1c.5-.9 1.8-1.8 3.6-1.8 3.8 0 4.5 2.5 4.5 5.8v7.7h-4v-6.8c0-1.6 0-3.7-2.3-3.7-2.3 0-2.6 1.8-2.6 3.6v6.9h-4z"/></svg>
+  </a>
+</div>
+
+</body>
+</html>
