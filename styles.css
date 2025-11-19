@@ -142,6 +142,13 @@ h2 { color: var(--h2-fg); font-size: 1.3em; margin-bottom: 16px; margin-top: 40p
     .marker-number { font-size: 11px; padding: 3px 7px; }
 }
 
+/* Styles for embedded map iframes */
+.map-embed { width: 100%; max-width: var(--content-max-width); padding: 0; }
+.map-embed .embed-map { width: 100%; height: 420px; border: 0; display: block; border-radius: 10px; }
+@media (max-width: 720px) {
+    .map-embed .embed-map { height: 320px; }
+}
+
 @media (max-width: 900px) {
     .main-flex { flex-direction: column; gap: 20px; padding: 24px 8px 16px 8px; }
     .galerie { flex-direction: column; gap: 30px; align-items: center; }
