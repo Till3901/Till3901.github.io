@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>News - Till</title>
     <link rel="stylesheet" href="styles.css">
+  <!-- Leaflet CSS for interactive map under "Meine Reisen" -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
 </head>
 <body>
 <div class="header">
@@ -45,12 +47,59 @@
       <p>Genieße die charmante Altstadt, die Maas und die kulinarische Vielfalt von Maastricht in den Niederlanden.</p>
       <a href="https://de.wikipedia.org/wiki/Maastricht" target="_blank" rel="noopener" aria-label="Mehr über Maastricht">Mehr über Maastricht</a>
     </div>
+    <!-- Karte mit allen drei Städten -->
+    <div id="reise-map" aria-label="Karte meiner Reisen"></div>
   </div>
 </div>
 
 <script src="theme.js" defer></script>
 <script src="news.js" defer></script>
 <script src="contact.js" defer></script>
+<!-- Leaflet JS (deferred) and map initializer for "Meine Reisen" -->
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+<script defer>
+document.addEventListener('DOMContentLoaded', function() {
+  // Koordinaten: Trondheim, Hamburg, Maastricht
+  const places = [
+    {name: 'Trondheim', lat: 63.4305, lon: 10.3951, url: 'https://de.wikipedia.org/wiki/Trondheim'},
+    {name: 'Hamburg', lat: 53.5511, lon: 9.9937, url: 'https://de.wikipedia.org/wiki/Hamburg'},
+    {name: 'Maastricht', lat: 50.8514, lon: 5.6910, url: 'https://de.wikipedia.org/wiki/Maastricht'}
+  ];
+
+  // create map (allow interactive zooming and controls)
+  const map = L.map('reise-map', {
+    scrollWheelZoom: true,
+    doubleClickZoom: true,
+    touchZoom: true,
+    boxZoom: true,
+    keyboard: true,
+    zoomControl: true
+  });
+
+  // add OSM tiles
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; OpenStreetMap contributors'
+  }).addTo(map);
+
+  // add markers and collect latlngs for polyline
+  const latlngs = [];
+  places.forEach((p, i) => {
+    const m = L.marker([p.lat, p.lon]).addTo(map);
+    m.bindPopup(`<strong>${p.name}</strong><br><a href=\"${p.url}\" target=\"_blank\" rel=\"noopener\">Mehr</a>`);
+    // add a tooltip with the marker number (1-based) that appears on hover
+    m.bindTooltip(String(i + 1), { direction: 'top', className: 'marker-number' });
+    latlngs.push([p.lat, p.lon]);
+  });
+
+  // draw polyline connecting the places
+  L.polyline(latlngs, { color: '#d9534f', weight: 4, opacity: 0.85 }).addTo(map);
+
+  // fit map to bounds with some padding
+  const bounds = L.latLngBounds(latlngs);
+  map.fitBounds(bounds.pad(0.2));
+});
+</script>
 
 <!-- Floating contact widget -->
 <div class="contact-widget" aria-label="Kontaktmöglichkeiten">

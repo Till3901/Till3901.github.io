@@ -111,6 +111,37 @@ h2 { color: var(--h2-fg); font-size: 1.3em; margin-bottom: 16px; margin-top: 40p
 .karte a { display: inline-block; background: var(--button-bg); color: var(--button-fg); padding: 8px 16px; border-radius: 6px; text-decoration: none; font-weight: bold; transition: background 0.2s; border: none; }
 .karte a:hover, .karte a:focus { background: var(--button-bg-hover); outline: 2px solid rgba(0,0,0,0.12); }
 
+/* Karte unter dem Abschnitt "Meine Reisen" */
+#reise-map {
+    width: 100%;
+    height: 420px;
+    max-width: var(--content-max-width);
+    margin: 12px auto 40px;
+    border-radius: 12px;
+    border: 2px solid var(--card-border);
+    box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    overflow: hidden;
+}
+
+/* Style for the small numbered tooltip shown on markers */
+.marker-number {
+    background: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    padding: 4px 8px;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 1;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.25);
+    border: 2px solid rgba(255,255,255,0.9);
+    text-align: center;
+}
+
+/* Ensure tooltip doesn't have the default small arrow when centered */
+@media (max-width: 720px) {
+    .marker-number { font-size: 11px; padding: 3px 7px; }
+}
+
 @media (max-width: 900px) {
     .main-flex { flex-direction: column; gap: 20px; padding: 24px 8px 16px 8px; }
     .galerie { flex-direction: column; gap: 30px; align-items: center; }
